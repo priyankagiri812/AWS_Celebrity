@@ -57,7 +57,7 @@ def lambda_handler(event, context):
             object_metadata = s3.head_object(Bucket=bucket, Key=key)
             person_full_name = object_metadata['Metadata'].get('fullname', 'Unknown')
 
-            update_index('cricketers_collection', faceId, person_full_name)
+            update_index('celebrities_collection', faceId, person_full_name)
 
             print("Face indexed successfully. FaceId: {}, Full Name: {}".format(faceId, person_full_name))
             return {'statusCode': 200, 'body': 'Face indexed successfully.'}

@@ -14,7 +14,7 @@ def index():
         image_file = request.files['image_path']
         image = Image.open(image_file)
         stream = io.BytesIO()
-        image.save(stream, format="JPEG")
+        image.save(stream, format="JFIF")
         image_binary = stream.getvalue()
 
         response = rekognition.search_faces_by_image(
@@ -29,7 +29,7 @@ def index():
             confidence = match['Face']['Confidence']
 
             face = dynamodb.get_item(
-                TableName='cricketers_collection',
+                TableName='celebrities_collection',
                 Key={'RekognitionId': {'S': face_id}}
             )
 
