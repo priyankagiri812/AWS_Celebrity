@@ -1,3 +1,12 @@
+1. Configuring AWS CLI in the system.
+2. Creating AWS Rekognition collection.
+3. Creating S3 Bucket.
+4. Creating DynamoDB Table.
+5. Creating Lambda function and making S3 bucket as trigger.
+6. Uploading images to S3 bucket so that it can trigger Lambda function to generate face prints of those images in Dynamo DB.
+7. Upload face prints to Dynamo DB.
+8. Use app.py to run the code and validate the working of project.
+
 ![image](https://github.com/user-attachments/assets/937315e6-0f48-49a5-bba2-047d13fa9d65)
 
 ![image](https://github.com/user-attachments/assets/88940030-fdc7-483d-a805-93aefcbb606f)
